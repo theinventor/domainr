@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d46f0f9d-9526-40e2-8462-8913f6f642e1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/auth-after.iml" afterPath="$PROJECT_DIR$/.idea/auth-after.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-320cc5857d565a38f4230f73d74bba73.css.gz" afterPath="$PROJECT_DIR$/public/assets/application-320cc5857d565a38f4230f73d74bba73.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-ae30e133eabbb10d9464189d3fb71e25.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-ae30e133eabbb10d9464189d3fb71e25.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.css.gz" afterPath="$PROJECT_DIR$/public/assets/application.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.js.gz" afterPath="$PROJECT_DIR$/public/assets/application.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="auth-after.iws" />
@@ -39,7 +32,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="7" selection-start="165" selection-end="165" vertical-scroll-proportion="0.18927445">
+            <state line="8" column="14" selection-start="167" selection-end="167" vertical-scroll-proportion="0.18927445">
               <folding />
             </state>
           </provider>
@@ -566,7 +559,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="7" selection-start="165" selection-end="165" vertical-scroll-proportion="0.18927445">
+        <state line="8" column="14" selection-start="167" selection-end="167" vertical-scroll-proportion="0.18927445">
           <folding />
         </state>
       </provider>
