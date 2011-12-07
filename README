@@ -1,4 +1,15 @@
 = Based off Railscasts omniauth example and some code from the robodomain guys
 
 This is an app to help you monitor your domain names
-This file was modified by JetBrains RubyMine 3.2.2 for binding GitHub repository
+
+do a bundle, then rake db:migrate
+
+to get twitter working you need an app at the developer site, then(if you are using bash):
+export TWITTER_KEY=keyhere
+export TWITTER_SECRET=secrethere
+
+and rails s
+
+it should be able to pull those from environment variables.
+
+have fun
