@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OmniAuth Example</title>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <div id="container">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+      <div id="nav">
+        <%= link_to "Home", "/" %>
+        <%= link_to "Domains", "/domains" %>
+      </div>
+      <%= yield %>
+    </div>
+  debug:<%= current_user.id if current_user %>
+  </body>
+</html>
