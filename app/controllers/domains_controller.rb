@@ -13,7 +13,12 @@ class DomainsController < ApplicationController
   # GET /domains/1
   # GET /domains/1.json
   def show
+
     @domain = Domain.find(params[:id])
+    if current_user.id != @domain.user_id
+      redirect_to "/"
+    end
+
 
     respond_to do |format|
       format.html # show.html.erb
@@ -54,31 +59,5 @@ class DomainsController < ApplicationController
     end
   end
 
-  # PUT /domains/1
-  # PUT /domains/1.json
-  def update
-    @domain = Domain.find(params[:id])
 
-    respond_to do |format|
-      if @domain.update_attributes(params[:domain])
-        format.html { redirect_to @domain, notice: 'Domain was successfully updated.' }
-        format.json { head :ok }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @domain.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /domains/1
-  # DELETE /domains/1.json
-  def destroy
-    @domain = Domain.find(params[:id])
-    @domain.destroy
-
-    respond_to do |format|
-      format.html { redirect_to domains_url }
-      format.json { head :ok }
-    end
-  end
 end
