@@ -1,4 +1,15 @@
 class DomainsController < ApplicationController
+
+  def update_domain
+    if current_user then
+    @domain = Domain.find(params[:id])
+    @domain.check_domain_now
+    redirect_to "/domains", notice: "Domain updated"
+    else
+      redirect_to "/", notice: "Sorry, permission problem or something.."
+    end
+  end
+
   # GET /domains
   # GET /domains.json
   def index
@@ -18,7 +29,6 @@ class DomainsController < ApplicationController
     if current_user.id != @domain.user_id
       redirect_to "/"
     end
-
 
     respond_to do |format|
       format.html # show.html.erb
