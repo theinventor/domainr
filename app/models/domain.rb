@@ -8,7 +8,7 @@ class Domain < ActiveRecord::Base
       w = Whois.whois(self.domain)
       self.registration_date = w.created_on
       self.expiration_date = w.expires_on
-      self.save!
+      self.save
     puts "DID A CHECK FROM MODEL"
   end
 
