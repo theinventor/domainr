@@ -3,7 +3,7 @@ task :cron => :environment do
   if Time.now.hour == 0 # run at midnight
     domains = Domain.all
     domains.each do |d|
-      if d.expiration_date < Time.now+7.days
+      if d.expiration_date < Time.now+14.days
         if d.expiration_date > Time.now
           Notification.notify(d).deliver
         end
