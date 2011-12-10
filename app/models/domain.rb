@@ -2,7 +2,7 @@ class Domain < ActiveRecord::Base
   validates_presence_of :user_id, :domain
   validates_uniqueness_of :domain
 
-  after_create :run_cron_now
+  after_create :check_domain_now
 
   def check_domain_now
       w = Whois.whois(self.domain)
