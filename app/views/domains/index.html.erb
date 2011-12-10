@@ -3,22 +3,17 @@
 <table>
   <tr>
     <th>Domain</th>
-    <th>User</th>
     <th>Registration date</th>
     <th>Expiration date</th>
     <th></th>
-    <th></th>
-    <th></th>
+
   </tr>
 
 <% @domains.each do |domain| %>
   <tr>
     <td><%= domain.domain %></td>
-    <td><%= domain.user_id %></td>
     <td><%= domain.registration_date %></td>
     <td><%= domain.expiration_date %></td>
-    <td><%= link_to 'Show', domain %></td>
-    <td><%= link_to 'Edit', edit_domain_path(domain) %></td>
     <td><%= link_to 'Destroy', domain, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>

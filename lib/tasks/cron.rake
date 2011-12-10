@@ -1,7 +1,14 @@
 task :cron => :environment do
 
   if Time.now.hour == 0 # run at midnight
-    puts "foo"
+    domains = Domain.all
+    domains.each do |d|
+      if d.expiration_date < Time.now+7.days
+        if d.expiration_date > Time.now
+          Notification.notify(d).deliver
+        end
+      end
+    end
   end
 
 
@@ -17,7 +24,5 @@ task :cron => :environment do
     else
       puts "skipping"
     end
-
   end
-
 end
