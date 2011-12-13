@@ -13,12 +13,15 @@ class DomainsController < ApplicationController
   # GET /domains
   # GET /domains.json
   def index
-    @domains = Domain.where('user_id = ?', current_user.id)
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @domains }
+    if current_user then
+      puts "hi"
+    else
+      redirect_to "/", notice: "Sorry, permission problem or something.."
     end
+
+    @domains = Domain.where('user_id = ?', current_user.id) if current_user
+
+
   end
 
   # GET /domains/1

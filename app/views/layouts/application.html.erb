@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OmniAuth Example</title>
+    <title>Domain Monitour - don't lose to expiration..</title>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tag %>
@@ -14,10 +14,11 @@
       <div id="nav">
         <%= link_to "Home", "/" %>
         <%= link_to "Domains", "/domains" %>
+        <%= link_to "Import", "/import/select" %>
       </div>
       <%= yield %>
     </div>
-  <%= current_user.id if current_user %>, <%= debug params %>
+
 
   </body>
 </html>

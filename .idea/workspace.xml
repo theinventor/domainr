@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d46f0f9d-9526-40e2-8462-8913f6f642e1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/import/select.html.erb" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/users_controller_test.rb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/users_helper_test.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/auth-after.iml" afterPath="$PROJECT_DIR$/.idea/auth-after.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/domains_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/domains_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/domain.rb" afterPath="$PROJECT_DIR$/app/models/domain.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/import_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/import_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="auth-after.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,7 +36,7 @@
       <file leaf-file-name="import_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/import_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="71" selection-start="973" selection-end="973" vertical-scroll-proportion="0.0">
+            <state line="43" column="0" selection-start="1526" selection-end="1658" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -60,10 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="domains_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="domains_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/domains_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="32" selection-start="1330" selection-end="1330" vertical-scroll-proportion="0.0">
+            <state line="23" column="0" selection-start="574" selection-end="574" vertical-scroll-proportion="0.44952682">
               <folding />
             </state>
           </provider>
@@ -99,7 +90,7 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0">
+            <state line="20" column="0" selection-start="570" selection-end="570" vertical-scroll-proportion="-12.5">
               <folding />
             </state>
           </provider>
@@ -123,10 +114,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="domain.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="domain.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/domain.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="53" selection-start="129" selection-end="129" vertical-scroll-proportion="0.04731861">
+            <state line="2" column="53" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -156,12 +147,12 @@
         <option value="$PROJECT_DIR$/app/views/alerts/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/alerts_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/import/select.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/import/domainsite.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/domains_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/import_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/domain.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/import_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/domains_controller.rb" />
       </list>
     </option>
   </component>
@@ -816,11 +807,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/import/select.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0" />
@@ -831,23 +817,30 @@
         <state line="13" column="0" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/domains_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/domain.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="32" selection-start="1330" selection-end="1330" vertical-scroll-proportion="0.0">
+        <state line="2" column="53" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="570" selection-end="570" vertical-scroll-proportion="-12.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/import_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="71" selection-start="973" selection-end="973" vertical-scroll-proportion="0.0">
+        <state line="43" column="0" selection-start="1526" selection-end="1658" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/domain.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/domains_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="53" selection-start="129" selection-end="129" vertical-scroll-proportion="0.04731861">
+        <state line="23" column="0" selection-start="574" selection-end="574" vertical-scroll-proportion="0.44952682">
           <folding />
         </state>
       </provider>
