@@ -1,0 +1,11 @@
+To import from domainsite.com - put your username/password here:
+
+<%= form_tag("/import/domainsite", :method => "post") do %>
+  <%= label_tag(:q, "Search for:") %>
+
+  <%= text_field_tag(:user) %>
+  <%= text_field_tag(:pass) %>
+
+  <%= submit_tag("Do it") %>
+<% end %>
+

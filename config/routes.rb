@@ -1,4 +1,9 @@
 Auth::Application.routes.draw do
+
+  get "import/select"
+  match "import/godaddy/:login" => "import#godaddy", :via => :post
+  match "import/domainsite/" => "import#domainsite", :via => :post
+
   resources :domains
 
   #making a little update route to manually check and return
@@ -9,4 +14,5 @@ Auth::Application.routes.draw do
   match "/auth/failure", to: "sessions#failure"
   match "/logout", to: "sessions#destroy", :as => "logout"
   resources :identities
+
 end

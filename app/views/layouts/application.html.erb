@@ -17,6 +17,7 @@
       </div>
       <%= yield %>
     </div>
-  <%= current_user.id if current_user %>
+  <%= current_user.id if current_user %>, <%= debug params %>
+
   </body>
 </html>

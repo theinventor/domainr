@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111207045355) do
+ActiveRecord::Schema.define(:version => 20111210231443) do
 
   create_table "domains", :force => true do |t|
     t.string   "domain"
@@ -20,6 +20,9 @@ ActiveRecord::Schema.define(:version => 20111207045355) do
     t.date     "expiration_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "alert_month"
+    t.boolean  "alert_week"
+    t.boolean  "alert_day"
   end
 
   create_table "identities", :force => true do |t|
@@ -36,6 +39,9 @@ ActiveRecord::Schema.define(:version => 20111207045355) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "alert_month"
+    t.boolean  "alert_week"
+    t.boolean  "alert_day"
   end
 
 end
