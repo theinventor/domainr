@@ -2,6 +2,8 @@ class Domain < ActiveRecord::Base
   validates_presence_of :user_id, :domain
   validates_uniqueness_of :domain, :scope => :user_id
 
+  default_scope :order => 'expiration_date ASC'
+
 
   def check_domain_now
     w = Whois.whois(self.domain)
