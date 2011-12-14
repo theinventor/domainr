@@ -1,5 +1,7 @@
+<div id="domainsite">
+<p>
 To import from domainsite.com - put your username/password here:
-
+</p>
 <%= form_tag("/import/domainsite", :method => "post") do %>
   <%= label_tag(:q, "Search for:") %>
 
@@ -9,3 +11,18 @@ To import from domainsite.com - put your username/password here:
   <%= submit_tag("Do it") %>
 <% end %>
 
+      </div>
+
+<div id="godaddy">
+<p>
+To import from godaddy.com - put your username/password here:
+</p>
+<%= form_tag("/import/godaddy", :method => "post") do %>
+  <%= label_tag(:q, "Search for:") %>
+
+  <%= text_field_tag(:user) %>
+  <%= text_field_tag(:pass) %>
+
+  <%= submit_tag("Do it") %>
+<% end %>
+</div>

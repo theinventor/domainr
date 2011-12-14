@@ -50,20 +50,15 @@ class DomainsController < ApplicationController
     end
   end
 
-  # GET /domains/1/edit
-  def edit
-    @domain = Domain.find(params[:id])
-  end
 
-  # POST /domains
-  # POST /domains.json
+
   def create
     @domain = Domain.new(params[:domain])
     @domain.user_id = current_user.id
 
     respond_to do |format|
       if @domain.save
-        @domain.check_domain_now
+        @domain.check_domain_now                           #HERE is where we manually update on create, so the after_create isn't in the way
         format.html { redirect_to @domain, notice: 'Domain was successfully created.' }
         format.json { render json: @domain, status: :created, location: @domain }
       else

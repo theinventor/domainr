@@ -1,7 +1,7 @@
 Auth::Application.routes.draw do
 
   get "import/select"
-  match "import/godaddy/:login" => "import#godaddy", :via => :post
+  match "import/godaddy/" => "import#godaddy", :via => :post
   match "import/domainsite/" => "import#domainsite", :via => :post
 
   resources :domains
