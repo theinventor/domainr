@@ -13,8 +13,9 @@ class ImportController < ApplicationController
       page = a.get("https://dcc.godaddy.com/PrintableDomainList.aspx?activeview=Domain&sa=")
       page.search("nobr").each do |result|
         if result.text.include?(".") then
-          foo = Domain.new(:domain => result.text, :user_id => current_user.id)
-          puts "Importing domain: #{result.text}"
+          domain_var = result.text
+          foo = Domain.new(:domain => domain_var.downcase, :user_id => current_user.id)
+          puts "Importing domain: #{domain_var.downcase}"
           foo.save(:validate => true)
         end
       end
@@ -42,13 +43,15 @@ class ImportController < ApplicationController
       temp_array1 = body.split("<br />")
       temp_array1.each do |a|
         if a.split(",")[0].include?("<html>") then
-          foo = Domain.new(:domain => a.split(",")[0].split(" ")[5], :user_id => current_user.id)
+          domain_var = a.split(",")[0].split(" ")[5]
+          foo = Domain.new(:domain => domain_var.downcase, :user_id => current_user.id)
           checker = Domain.find_by_domain(a.split(",")[0])
           if checker then puts "Found it" else foo.save(:validate => true) end
         else
           if a.split(",")[0].include?("</html>") then puts "skipping last row"
           else
-            foo = Domain.new(:domain => a.split(",")[0], :user_id => current_user.id)
+            domain_var = a.split(",")[0]
+            foo = Domain.new(:domain => domain_var.downcase, :user_id => current_user.id)
             checker = Domain.find_by_domain(a.split(",")[0])
             if checker then puts "Found it" else foo.save(:validate => true) end
           end

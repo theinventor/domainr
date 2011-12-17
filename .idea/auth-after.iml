@@ -18,8 +18,8 @@
     <orderEntry type="library" scope="PROVIDED" name="rake (v0.9.2.2, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt-ruby (v3.0.1, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails (v3.1.3, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="arel (v2.2.1, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v3.1.3, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="arel (v2.2.1, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v3.1.3, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.0.21, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faraday (v0.7.5, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
@@ -30,33 +30,33 @@
     <orderEntry type="library" scope="PROVIDED" name="rack-ssl (v1.3.2, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mechanize (v2.0.1, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multipart-post (v1.1.4, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="actionpack (v3.1.3, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-mount (v0.8.3, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.5.0, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="actionpack (v3.1.3, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.0.4, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.5.0, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.0.0, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v1.1.0, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v3.1.3, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v0.11.0, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="omniauth-identity (v1.0.0, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="omniauth-google-oauth2 (v0.1.7, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="net-http-digest_auth (v1.2, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-http-persistent (v1.9, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="net-http-digest_auth (v1.2, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activeresource (v3.1.3, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="whois (v2.1.0, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.1.11, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-cache (v1.1, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="omniauth-oauth2 (v1.0.0, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.3, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rack-cache (v1.1, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="omniauth-oauth (v1.0.0, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v0.14.6, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="execjs (v1.2.9, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="omniauth (v1.0.1, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="execjs (v1.2.9, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.17.2, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionmailer (v3.1.3, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.2.0, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sass-rails (v3.1.5, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hashie (v1.2.0, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sass-rails (v3.1.5, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.0, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.3.5, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v3.1.3, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
@@ -66,15 +66,15 @@
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.31, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.3.4, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tilt (v1.3.3, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.11, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v1.0.19, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.11, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="webrobots (v0.0.12, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="oauth2 (v0.5.1, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.1, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="omniauth-twitter (v0.0.7, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.1.3, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="omniauth-facebook (v1.0.0, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.0.3, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="omniauth-facebook (v1.0.0, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.1, RVM: ruby-1.9.2-p180 [threeone]) [gem]" level="application" />
   </component>
 </module>

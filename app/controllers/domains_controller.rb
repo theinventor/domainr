@@ -55,7 +55,7 @@ class DomainsController < ApplicationController
   def create
     @domain = Domain.new(params[:domain])
     @domain.user_id = current_user.id
-
+    @domain.domain = @domain.domain.downcase
     respond_to do |format|
       if @domain.save
         @domain.check_domain_now                           #HERE is where we manually update on create, so the after_create isn't in the way
