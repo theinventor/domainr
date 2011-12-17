@@ -15,6 +15,7 @@ task :cron => :environment do
   domains = Domain.all
   domains.each do |d|
     if d.expiration_date.nil? then
+      d.domain = d.domain.downcase
       w = Whois.whois(d.domain)
       d.registration_date = w.created_on
       puts w.created_on
