@@ -2,16 +2,16 @@ class UsersController < ApplicationController
 #this is really just here to modify the notification email after signed in
 
   def edit
-    if current_user                                 #make sure logged in
-      if current_user.id == params[:id]             #make sure they want to edit themselves?
-        @user = User.find(current_user.id)
-      end
-    end
+    #if current_user                                 #make sure logged in
+      #if current_user.id == params[:id]             #make sure they want to edit themselves?
+        @user = User.find(params[:id])
+      #end
+    #end
   end
 
   def update
-    if current_user                                 #make sure logged in
-      if current_user.id == params[:id]             #make sure they want to edit themselves?
+    #if current_user                                 #make sure logged in
+      #if current_user.id == params[:id]             #make sure they want to edit themselves?
         @user = User.find(params[:id])
 
         respond_to do |format|
@@ -23,8 +23,8 @@ class UsersController < ApplicationController
             format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }
           end
         end
-      end
-    end
+      #end
+    #end
   end
 
 end
