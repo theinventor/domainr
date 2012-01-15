@@ -14,13 +14,18 @@ task :cron => :environment do
   #if Time.now.hour == 18 # run at midnight
     @users = User.all
     @users.each do |u|
+      mail_them = false
       u.domains.each do |d|
         if d.expiration_date < (Time.now.to_date + 90.days)
           if d.expiration_date > Time.now.to_date
-            Notification.notify(d.user_id).deliver
+             mail_them = true
           end
         end
       end
+       if mail_them == true then
+         Notification.notify(u.id).deliver
+         puts "email sending to #{u.name}" if u.name
+       end
     end
   #end
 
