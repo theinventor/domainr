@@ -1,0 +1,7 @@
+A domain is expiring TOMORROW, go to the site to check it out. <br>
+
+<% @user.domains.each do |d| %>
+    <% if d.expiration_date < (Time.now.to_date + 60.days) then %>
+        <%= d.domain %> - <%= d.expiration_date %><br>
+    <% end %>
+<% end %>
