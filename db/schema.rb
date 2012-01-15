@@ -11,37 +11,38 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111210231443) do
+ActiveRecord::Schema.define(:version => 20120115041435) do
 
   create_table "domains", :force => true do |t|
-    t.string   "domain"
-    t.integer  "user_id"
-    t.date     "registration_date"
-    t.date     "expiration_date"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "alert_month"
-    t.boolean  "alert_week"
-    t.boolean  "alert_day"
+    t.string    "domain"
+    t.integer   "user_id"
+    t.date      "registration_date"
+    t.date      "expiration_date"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.boolean   "alert_month"
+    t.boolean   "alert_week"
+    t.boolean   "alert_day"
   end
 
   create_table "identities", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "password_digest"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.string    "email"
+    t.string    "password_digest"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "alert_month"
-    t.boolean  "alert_week"
-    t.boolean  "alert_day"
+    t.string    "provider"
+    t.string    "uid"
+    t.string    "name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.boolean   "alert_month"
+    t.boolean   "alert_week"
+    t.boolean   "alert_day"
+    t.string    "email"
   end
 
 end
