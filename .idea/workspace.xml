@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d46f0f9d-9526-40e2-8462-8913f6f642e1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/notification.rb" afterPath="$PROJECT_DIR$/app/mailers/notification.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/domains/index.html.erb" afterPath="$PROJECT_DIR$/app/views/domains/index.html.erb" />
     </list>
     <ignored path="auth-after.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,10 +30,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="18" selection-start="52" selection-end="52" vertical-scroll-proportion="0.04636785">
+            <state line="2" column="18" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="92" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/domains/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="53" selection-start="442" selection-end="442" vertical-scroll-proportion="0.4093098">
               <folding />
             </state>
           </provider>
@@ -55,7 +71,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/import/select.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/import_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/domains_controller.rb" />
@@ -71,6 +86,7 @@
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/mailers/notification.rb" />
+        <option value="$PROJECT_DIR$/app/views/domains/index.html.erb" />
       </list>
     </option>
   </component>
@@ -723,7 +739,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing with no authorization" />
+    <option name="LAST_COMMIT_MESSAGE" value="auth hack in place, notifications now go to users defined email" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -742,18 +758,12 @@
     <MESSAGE value="adding a bit of the logic for re-checking in the last week to catch renewals" />
     <MESSAGE value="added a controller/view/routes for editing a user profile field; email (for notifications)" />
     <MESSAGE value="testing with no authorization" />
+    <MESSAGE value="auth hack in place, notifications now go to users defined email" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20120115041435_add_email_to_user.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -817,13 +827,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="92" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/sessions/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="35" selection-start="354" selection-end="354" vertical-scroll-proportion="0.38523275">
@@ -854,7 +857,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="18" selection-start="52" selection-end="52" vertical-scroll-proportion="0.04636785">
+        <state line="2" column="18" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="92" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/domains/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="53" selection-start="442" selection-end="442" vertical-scroll-proportion="0.4093098">
           <folding />
         </state>
       </provider>

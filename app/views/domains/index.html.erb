@@ -14,7 +14,8 @@
     <td><%= domain.domain %></td>
     <td><%= domain.registration_date %></td>
     <td><%= domain.expiration_date %></td>
-    <td><%= link_to 'Destroy', domain, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Remove', domain, confirm: 'Are you sure?', method: :delete %>
+      <%= link_to "recheck", "/update_now/#{domain.id}" %></td>
   </tr>
 <% end %>
 </table>
