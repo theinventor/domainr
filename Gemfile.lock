@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/jeremyolliver/annotate_models.git
+  revision: 4d57e4fe6360125f17886168120a48091a268e45
+  branch: rake_compatibility
+  specs:
+    annotate (2.4.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -148,6 +155,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate!
   bcrypt-ruby (~> 3.0.0)
   coffee-rails (~> 3.1.1)
   jquery-rails

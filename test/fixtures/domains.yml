@@ -11,3 +11,17 @@ two:
   user_id: 1
   registration_date: 2011-12-06
   expiration_date: 2011-12-06
+
+# == Schema Information
+#
+# Table name: domains
+#
+#  id                :integer         primary key
+#  domain            :string(255)
+#  user_id           :integer
+#  registration_date :date
+#  expiration_date   :date
+#  created_at        :timestamp
+#  updated_at        :timestamp
+#
+

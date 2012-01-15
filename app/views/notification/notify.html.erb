@@ -1,1 +1,5 @@
-A domain is expiring, go to the site to check it out.  You have less than 7 days.
+A domain is expiring, go to the site to check it out.
+
+<% @user.domains.each do |d| %>
+    <%= d.domain %> - <%= d.expiration_date %><br>
+<% end %>

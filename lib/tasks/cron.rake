@@ -1,15 +1,30 @@
 task :cron => :environment do
 
-  if Time.now.hour == 0 # run at midnight
-    domains = Domain.all
-    domains.each do |d|
-      if d.expiration_date < Time.now+14.days
-        if d.expiration_date > Time.now
-          Notification.notify(d).deliver
+  #if Time.now.hour == 0 # run at midnight
+  #  @domains = Domain.all
+  #  @domains.each do |d|
+  #    if d.expiration_date < Time.now.to_date + 90.days
+  #      if d.expiration_date > Time.now.to_date
+  #        Notification.notify(d).deliver
+  #      end
+  #    end
+  #  end
+  #end
+
+  #if Time.now.hour == 18 # run at midnight
+    @users = User.all
+    @users.each do |u|
+      u.domains.each do |d|
+        if d.expiration_date < (Time.now.to_date + 90.days)
+          if d.expiration_date > Time.now.to_date
+            Notification.notify(d.user_id).deliver
+          end
         end
       end
     end
-  end
+  #end
+
+
 
 
   domains = Domain.all
@@ -23,7 +38,7 @@ task :cron => :environment do
       d.expiration_date = w.expires_on
       d.save!
     else
-      puts "skipping"
+      #puts "skipping"
     end
   end
 end

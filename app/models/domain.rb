@@ -1,4 +1,6 @@
 class Domain < ActiveRecord::Base
+  belongs_to :user
+
   validates_presence_of :user_id, :domain
   validates_uniqueness_of :domain, :scope => :user_id
 
@@ -20,3 +22,17 @@ class Domain < ActiveRecord::Base
 
 
 end
+
+# == Schema Information
+#
+# Table name: domains
+#
+#  id                :integer         primary key
+#  domain            :string(255)
+#  user_id           :integer
+#  registration_date :date
+#  expiration_date   :date
+#  created_at        :timestamp
+#  updated_at        :timestamp
+#
+

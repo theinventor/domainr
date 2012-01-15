@@ -22,6 +22,8 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
+
 end
 
 gem 'jquery-rails'
