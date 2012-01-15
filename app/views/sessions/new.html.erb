@@ -12,6 +12,10 @@
     <strong>OmniAuth UID:</strong>
     <%= current_user.uid %>
   </p>
+      <p>
+    <strong>Notification Email:</strong>
+    <%= current_user.email.to_s %> <%= link_to "change", "/users/#{current_user.id}/edit" %>
+  </p>
   <p><%= link_to "Log out", logout_path %></p>
 <% else %>
   <h1>Sign In</h1>
