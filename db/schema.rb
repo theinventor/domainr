@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120115163502) do
+ActiveRecord::Schema.define(:version => 20120116015210) do
 
   create_table "domains", :force => true do |t|
     t.string    "domain"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20120115163502) do
     t.text      "page_meta"
     t.integer   "page_title_diff"
     t.integer   "page_html_diff"
+    t.string    "ip_address"
   end
 
   create_table "identities", :force => true do |t|

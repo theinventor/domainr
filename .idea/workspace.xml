@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d46f0f9d-9526-40e2-8462-8913f6f642e1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/notification/daily_outage.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20120115162650_add_html_to_domain.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20120115163502_add_diff_to_domain.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/auth-after.iml" afterPath="$PROJECT_DIR$/.idea/auth-after.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/notification.rb" afterPath="$PROJECT_DIR$/app/mailers/notification.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/domain.rb" afterPath="$PROJECT_DIR$/app/models/domain.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/cron.rake" afterPath="$PROJECT_DIR$/lib/tasks/cron.rake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/domains.yml" afterPath="$PROJECT_DIR$/test/fixtures/domains.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/users.yml" afterPath="$PROJECT_DIR$/test/fixtures/users.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/domain_test.rb" afterPath="$PROJECT_DIR$/test/unit/domain_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/user_test.rb" afterPath="$PROJECT_DIR$/test/unit/user_test.rb" />
     </list>
     <ignored path="auth-after.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,19 +49,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="domains_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="domains_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/domains_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="4" selection-start="73" selection-end="93" vertical-scroll-proportion="0.023659306">
+            <state line="3" column="4" selection-start="73" selection-end="93" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cron.rake" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="cron.rake" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/tasks/cron.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="27" selection-start="1564" selection-end="1564" vertical-scroll-proportion="0.0">
+            <state line="168" column="102" selection-start="5222" selection-end="5222" vertical-scroll-proportion="0.5504732">
               <folding />
             </state>
           </provider>
@@ -126,8 +113,8 @@
         <option value="$PROJECT_DIR$/app/models/domain.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/mailers/notification.rb" />
-        <option value="$PROJECT_DIR$/lib/tasks/cron.rake" />
         <option value="$PROJECT_DIR$/app/views/notification/daily_outage.html.erb" />
+        <option value="$PROJECT_DIR$/lib/tasks/cron.rake" />
       </list>
     </option>
   </component>
@@ -784,7 +771,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="add small link to recheck a domain" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove that debug bit" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -805,6 +792,8 @@
     <MESSAGE value="testing with no authorization" />
     <MESSAGE value="auth hack in place, notifications now go to users defined email" />
     <MESSAGE value="add small link to recheck a domain" />
+    <MESSAGE value="started the website monitoring bits, new notification if website changes" />
+    <MESSAGE value="remove that debug bit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -870,11 +859,6 @@
         <state line="15" column="92" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/cron.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="27" selection-start="1564" selection-end="1564" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/mailers/notification.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="33" selection-start="572" selection-end="572" vertical-scroll-proportion="0.0" />
@@ -887,7 +871,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/domains_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="4" selection-start="73" selection-end="93" vertical-scroll-proportion="0.023659306">
+        <state line="3" column="4" selection-start="73" selection-end="93" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/cron.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="168" column="102" selection-start="5222" selection-end="5222" vertical-scroll-proportion="0.5504732">
           <folding />
         </state>
       </provider>
