@@ -15,4 +15,11 @@ class Notification < ActionMailer::Base
     end
   end
 
+  def daily_outage(user_id)
+    @user = User.find(user_id)
+    if @user.email
+      mail(:to => @user.email, :subject => 'Website changed a LOT')
+    end
+  end
+
 end

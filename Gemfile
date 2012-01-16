@@ -10,7 +10,8 @@ gem 'pg'
 
 gem 'whois'
 gem 'mechanize'
-gem 'nokogiri'
+gem 'nokogiri', '1.5.0'
+#gem 'htmldiff'  #compiled from source for a test
 
 # Gems used only for assets and not required
 # in production environments by default.

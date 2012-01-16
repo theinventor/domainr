@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120115041435) do
+ActiveRecord::Schema.define(:version => 20120115163502) do
 
   create_table "domains", :force => true do |t|
     t.string    "domain"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(:version => 20120115041435) do
     t.boolean   "alert_month"
     t.boolean   "alert_week"
     t.boolean   "alert_day"
+    t.text      "page_html"
+    t.string    "page_title"
+    t.string    "page_h1"
+    t.string    "page_h2"
+    t.text      "page_meta"
+    t.integer   "page_title_diff"
+    t.integer   "page_html_diff"
   end
 
   create_table "identities", :force => true do |t|

@@ -1,4 +1,5 @@
 class Domain < ActiveRecord::Base
+
   belongs_to :user
 
   validates_presence_of :user_id, :domain
@@ -34,5 +35,15 @@ end
 #  expiration_date   :date
 #  created_at        :timestamp
 #  updated_at        :timestamp
+#  alert_month       :boolean
+#  alert_week        :boolean
+#  alert_day         :boolean
+#  page_html         :text
+#  page_title        :string(255)
+#  page_h1           :string(255)
+#  page_h2           :string(255)
+#  page_meta         :text
+#  page_title_diff   :integer
+#  page_html_diff    :integer
 #
 

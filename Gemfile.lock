@@ -160,7 +160,7 @@ DEPENDENCIES
   coffee-rails (~> 3.1.1)
   jquery-rails
   mechanize
-  nokogiri
+  nokogiri (= 1.5.0)
   omniauth-facebook
   omniauth-google-oauth2
   omniauth-identity

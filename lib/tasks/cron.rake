@@ -18,7 +18,7 @@ task :cron => :environment do
     end
   end
 
-  #do the daily notifications for the following day - every night at midnight
+  #do the daily EXPIRATION notifications for the following day - every night at midnight
   if Time.now.hour == 0 # run at midnight
     @users = User.all
     @users.each do |u|
@@ -33,6 +33,25 @@ task :cron => :environment do
       if mail_them == true
         Notification.daily_notify(u.id).deliver
         puts "email sending to #{u.name}" if u.name
+      end
+    end
+  end
+
+  #do the daily OUTAGE notifications for the day - every night at 4am
+  if Time.now.hour == 4 # run at midnight
+    @users = User.all
+    @users.each do |u|
+      mail_them = false
+      u.domains.each do |d|
+        if d.page_title_diff
+          if d.page_title_diff > 0
+            mail_them = true
+          end
+        end
+      end
+      if mail_them == true
+        Notification.daily_outage(u.id).deliver
+        puts "outage email sending to #{u.name}" if u.name
       end
     end
   end
@@ -60,7 +79,7 @@ task :cron => :environment do
 
 
 
-
+  #check the expiration dates for any domain that doesn't have it, this happens with every cron run - hourly ATM
   domains = Domain.all
   domains.each do |d|
     if d.expiration_date.nil? then
@@ -75,4 +94,84 @@ task :cron => :environment do
       #puts "skipping"
     end
   end
+
+  #check periodically (daily) for HTML content to make sure page is rendering
+  #save some basic diff info into the model so we can alert on major changes/outages
+
+  #if Time.now.hour == 0 # run at midnight
+  require 'open-uri'
+
+  @domains = Domain.all(:limit => 5)
+  @domains.each do |d|
+    url = "http://www." + d.domain
+    doc = Nokogiri::HTML(open(url))
+
+    #do the H1 tag
+    if d.page_html
+      puts "in the first page_html if"
+      if doc
+        puts "in the first if doc!"
+        d.page_h1 = doc.css("h1").text
+      end
+    else
+      d.page_h1 = doc.css("h1").text
+    end
+
+    #do the TITLE tag
+    if d.page_html
+      if doc.css("title")
+        d.page_title_diff = d.page_title.length - doc.css("title").text.length           #diff is current title length minus actual title length, as percentage
+                                                                                         #percent_base = 100 / d.page_title.length                                #figure out percentages  "29" ==   3.4
+                                                                                         #diff_var1 = 100 / d.page_title_diff                                   #change by "14"
+                                                                                         #percent_diff = d.page_title_diff * percent_base                        #this should be a percent of difference
+
+        d.page_title = doc.css("title").text
+      end
+    else
+      d.page_title = doc.css("title").text
+    end
+
+    #do the H2 tag
+    if d.page_html
+      if doc.css("h2")
+        d.page_h2 = doc.css("h2").text
+      end
+    else
+      d.page_h2 = doc.css("h2").text
+    end
+
+    #do the META tags
+    #if d.page_html
+    #  if doc.at_css("meta")
+    #    d.page_meta = doc.at_css("meta").text
+    #    #d.save
+    #  end
+    #else
+    #  d.page_meta = doc.at_css("meta").text
+    #  puts doc.at_css("meta")
+    #end
+
+
+    #load the page after diffs are checked
+    if d.page_html
+      if doc
+        d.page_html = doc.to_s
+        d.save
+        puts "Saving page for: #{d.domain}"      #debug
+      end
+    else
+      d.page_html = doc.to_s
+      d.save
+      puts "Saving page for: #{d.domain}"       #debug
+    end
+
+
+  end
+
+
+
 end
+#debug text to copy/paste into rails c
+#require 'open-uri'
+#url = "http://drpcfix.com"
+#@doc = Nokogiri::HTML(open(url))

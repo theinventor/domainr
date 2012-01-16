@@ -1,0 +1,7 @@
+A website html chunk significantly changed! go to the site to check it out. <br>
+
+<% @user.domains.each do |d| %>
+    <% if d.page_title_diff > 0  %>
+        <%= d.domain %> - <%= d.page_title_diff %><br>
+    <% end %>
+<% end %>
