@@ -45,5 +45,6 @@ end
 #  page_meta         :text
 #  page_title_diff   :integer
 #  page_html_diff    :integer
+#  ip_address        :string(255)
 #
 

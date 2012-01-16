@@ -5,6 +5,8 @@
     <th>Domain</th>
     <th>Registration date</th>
     <th>Expiration date</th>
+    <th>Title Diff</th>
+    <th>Last IP</th>
     <th></th>
 
   </tr>
@@ -14,6 +16,8 @@
     <td><%= domain.domain %></td>
     <td><%= domain.registration_date %></td>
     <td><%= domain.expiration_date %></td>
+    <td><%= domain.page_title_diff %></td>
+    <td><%= domain.ip_address %></td>
     <td><%= link_to 'Remove', domain, confirm: 'Are you sure?', method: :delete %>
       <%= link_to "recheck", "/update_now/#{domain.id}" %></td>
   </tr>
