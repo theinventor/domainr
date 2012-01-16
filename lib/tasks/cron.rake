@@ -160,10 +160,10 @@ task :cron => :environment do
       #load the page after diffs are checked
       if d.page_html
         if doc
-          d.page_html = doc.to_s
+          d.page_html = doc.text
         end
       else
-        d.page_html = doc.to_s
+        d.page_html = doc.text
       end
 
       #for now we'll just store the IP we found '                               #add a check for this!
