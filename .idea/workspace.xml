@@ -60,7 +60,7 @@
       <file leaf-file-name="cron.rake" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/tasks/cron.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="165" column="30" selection-start="5304" selection-end="5304" vertical-scroll-proportion="0.5977918">
+            <state line="173" column="47" selection-start="5675" selection-end="5675" vertical-scroll-proportion="0.83438486">
               <folding />
             </state>
           </provider>
@@ -770,7 +770,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="better bug fix - works in a cron" />
+    <option name="LAST_COMMIT_MESSAGE" value="trying a UTF error fix - ony putting text in DB for full page save" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -797,6 +797,7 @@
     <MESSAGE value="add the migration - always forget these!" />
     <MESSAGE value="bug tweak, error catch" />
     <MESSAGE value="better bug fix - works in a cron" />
+    <MESSAGE value="trying a UTF error fix - ony putting text in DB for full page save" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -881,7 +882,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/cron.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="30" selection-start="5304" selection-end="5304" vertical-scroll-proportion="0.5977918">
+        <state line="173" column="47" selection-start="5675" selection-end="5675" vertical-scroll-proportion="0.83438486">
           <folding />
         </state>
       </provider>

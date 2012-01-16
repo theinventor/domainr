@@ -98,78 +98,79 @@ task :cron => :environment do
   #check periodically (daily) for HTML content to make sure page is rendering
   #save some basic diff info into the model so we can alert on major changes/outages
 
-  #if Time.now.hour == 0 # run at midnight
-  require 'open-uri'
-  require 'resolv'
+  if Time.now.hour == 0 # run at midnight
+    require 'open-uri'
+    require 'resolv'
 
-  @domains = Domain.all
-  @domains.each do |d|
-    url = "http://www." + d.domain
-    begin
-      doc = Nokogiri::HTML(open(url))
-      ip_address = Resolv.getaddress(d.domain)
-    rescue
-      puts "Failed lookup"
-    else
-
-      #do the H1 tag
-      if d.page_html
-        puts "in the first page_html if"
-        if doc
-          puts "in the first if doc!"
-          d.page_h1 = doc.css("h1").text[0..254]                                 #a little column size error catch with the range at the end
-        end
+    @domains = Domain.all
+    @domains.each do |d|
+      url = "http://www." + d.domain
+      begin
+        doc = Nokogiri::HTML(open(url))
+        ip_address = Resolv.getaddress(d.domain)
+      rescue
+        puts "Failed lookup"
       else
-        d.page_h1 = doc.css("h1").text[0..254]
-      end
 
-      #do the TITLE tag
-      if d.page_html
-        if doc.css("title")
-          d.page_title_diff = d.page_title.length - doc.css("title").text.length           #diff is current title length minus actual title length, as percentage
-                                                                                           #percent_base = 100 / d.page_title.length                                #figure out percentages  "29" ==   3.4
-                                                                                           #diff_var1 = 100 / d.page_title_diff                                   #change by "14"
-                                                                                           #percent_diff = d.page_title_diff * percent_base                        #this should be a percent of difference
+        #do the H1 tag
+        if d.page_html
+          puts "in the first page_html if"
+          if doc
+            puts "in the first if doc!"
+            d.page_h1 = doc.css("h1").text[0..254]                                 #a little column size error catch with the range at the end
+          end
+        else
+          d.page_h1 = doc.css("h1").text[0..254]
+        end
 
+        #do the TITLE tag
+        if d.page_html
+          if doc.css("title")
+            d.page_title_diff = d.page_title.length - doc.css("title").text.length           #diff is current title length minus actual title length, as percentage
+                                                                                             #percent_base = 100 / d.page_title.length                                #figure out percentages  "29" ==   3.4
+                                                                                             #diff_var1 = 100 / d.page_title_diff                                   #change by "14"
+                                                                                             #percent_diff = d.page_title_diff * percent_base                        #this should be a percent of difference
+
+            d.page_title = doc.css("title").text[0..254]
+          end
+        else
           d.page_title = doc.css("title").text[0..254]
         end
-      else
-        d.page_title = doc.css("title").text[0..254]
-      end
 
-      #do the H2 tag
-      if d.page_html
-        if doc.css("h2")
-          d.page_h2 = doc.css("h2").text[0..254]                       #had a broken page with a LONG h2
+        #do the H2 tag
+        if d.page_html
+          if doc.css("h2")
+            d.page_h2 = doc.css("h2").text[0..254]                       #had a broken page with a LONG h2
+          end
+        else
+          d.page_h2 = doc.css("h2").text[0..254]
         end
-      else
-        d.page_h2 = doc.css("h2").text[0..254]
-      end
 
-      #do the META tags
-      #if d.page_html
-      #  if doc.at_css("meta")
-      #    d.page_meta = doc.at_css("meta").text
-      #    #d.save
-      #  end
-      #else
-      #  d.page_meta = doc.at_css("meta").text
-      #  puts doc.at_css("meta")
-      #end
+        #do the META tags
+        #if d.page_html
+        #  if doc.at_css("meta")
+        #    d.page_meta = doc.at_css("meta").text
+        #    #d.save
+        #  end
+        #else
+        #  d.page_meta = doc.at_css("meta").text
+        #  puts doc.at_css("meta")
+        #end
 
-      #load the page after diffs are checked
-      if d.page_html
-        if doc
+        #load the page after diffs are checked
+        if d.page_html
+          if doc
+            d.page_html = doc.text
+          end
+        else
           d.page_html = doc.text
         end
-      else
-        d.page_html = doc.text
-      end
 
-      #for now we'll just store the IP we found '                               #add a check for this!
-      d.ip_address = ip_address if ip_address
-      d.save
-      puts "Saving page for: #{d.domain}"       #debug
+        #for now we'll just store the IP we found '                               #add a check for this!
+        d.ip_address = ip_address if ip_address
+        d.save
+        puts "Saving page for: #{d.domain}"       #debug
+      end
     end
   end
 
