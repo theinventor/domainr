@@ -101,7 +101,7 @@ task :cron => :environment do
   #if Time.now.hour == 0 # run at midnight
   require 'open-uri'
 
-  @domains = Domain.all(:limit => 5)
+  @domains = Domain.all
   @domains.each do |d|
     url = "http://www." + d.domain
     doc = Nokogiri::HTML(open(url))
