@@ -140,10 +140,10 @@ task :cron => :environment do
       #do the H2 tag
       if d.page_html
         if doc.css("h2")
-          d.page_h2 = doc.css("h2").text
+          d.page_h2 = truncate(doc.css("h2").text, :length => 255)                       #had a broken page with a LONG h2
         end
       else
-        d.page_h2 = doc.css("h2").text
+        d.page_h2 = truncate(doc.css("h2").text, :length => 255)
       end
 
       #do the META tags
