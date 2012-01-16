@@ -117,10 +117,10 @@ task :cron => :environment do
         puts "in the first page_html if"
         if doc
           puts "in the first if doc!"
-          d.page_h1 = doc.css("h1").text
+          d.page_h1 = doc.css("h1").text[0..254]                                 #a little column size error catch with the range at the end
         end
       else
-        d.page_h1 = doc.css("h1").text
+        d.page_h1 = doc.css("h1").text[0..254]
       end
 
       #do the TITLE tag
@@ -131,19 +131,19 @@ task :cron => :environment do
                                                                                            #diff_var1 = 100 / d.page_title_diff                                   #change by "14"
                                                                                            #percent_diff = d.page_title_diff * percent_base                        #this should be a percent of difference
 
-          d.page_title = doc.css("title").text
+          d.page_title = doc.css("title").text[0..254]
         end
       else
-        d.page_title = doc.css("title").text
+        d.page_title = doc.css("title").text[0..254]
       end
 
       #do the H2 tag
       if d.page_html
         if doc.css("h2")
-          d.page_h2 = truncate(doc.css("h2").text, :length => 255)                       #had a broken page with a LONG h2
+          d.page_h2 = doc.css("h2").text[0..254]                       #had a broken page with a LONG h2
         end
       else
-        d.page_h2 = truncate(doc.css("h2").text, :length => 255)
+        d.page_h2 = doc.css("h2").text[0..254]
       end
 
       #do the META tags

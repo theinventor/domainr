@@ -60,7 +60,7 @@
       <file leaf-file-name="cron.rake" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/tasks/cron.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="142" column="122" selection-start="4687" selection-end="4687" vertical-scroll-proportion="0.6214511">
+            <state line="119" column="140" selection-start="3578" selection-end="3578" vertical-scroll-proportion="0.07728706">
               <folding />
             </state>
           </provider>
@@ -770,7 +770,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="add the migration - always forget these!" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug tweak, error catch" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -795,6 +795,7 @@
     <MESSAGE value="remove that debug bit" />
     <MESSAGE value="added IP check and a rescue for name resolution problems" />
     <MESSAGE value="add the migration - always forget these!" />
+    <MESSAGE value="bug tweak, error catch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -879,7 +880,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/cron.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="122" selection-start="4687" selection-end="4687" vertical-scroll-proportion="0.6214511">
+        <state line="119" column="140" selection-start="3578" selection-end="3578" vertical-scroll-proportion="0.07728706">
           <folding />
         </state>
       </provider>
