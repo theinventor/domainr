@@ -1,5 +1,34 @@
 class ImportController < ApplicationController
+
 #this class is just to go to sites and pull in domains
+  def receive_mail
+    mail_text = params[:text]
+    mail_html = params[:html]
+    user = User.find_by_email(params[:from])
+
+    if mail_text
+      mail = mail_text
+    else
+      mail = mail_html
+    end
+
+    if user                                     #only get in to this if we have that user..
+      mail_array = mail.split(" ")              #lets just get every "word" and look for a domain!
+
+      mail_array.each do |word|
+        if /^[a-zA-Z0-9\-\.]+\.(com|org|net|mil|edu|co|me|COM|ORG|NET|MIL|EDU|CO|ME)$/.match(word)      #must be a domain!
+          Domain.create domain: word, user_id: user.id
+        end
+      end
+    end
+
+    that_worked = true
+    if that_worked
+      head :ok
+    else
+      head 500
+    end
+  end
 
   def godaddy
     if current_user then

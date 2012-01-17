@@ -17,4 +17,7 @@ Auth::Application.routes.draw do
   match "/logout", to: "sessions#destroy", :as => "logout"
   resources :identities
 
+  #get mail from sendgrid and process some domains!
+  post '/receive_mail' => 'import#receive_mail'
+
 end
