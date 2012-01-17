@@ -4,8 +4,12 @@ class ImportController < ApplicationController
   def receive_mail
     mail_text = params[:text]
     mail_html = params[:html]
-    user = User.find_by_email(params[:from])
-    puts "From: #{params[:from]}"
+    from_email = params[:from].split(">")[0].split("<")[1]
+
+    user = User.find_by_email(from_email)
+
+    puts "From: #{from_email}"
+
 
     if mail_text
       mail = mail_text
