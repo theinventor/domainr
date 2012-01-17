@@ -1,9 +1,13 @@
+<h2>Import Domains the easy way!</h2>
+<p>We built a few simple integrations to make this easy for you;</p>
+<h4>Email</h4>
+<p>just email a list of domains in any format, in the body of the email, to import@domainmonitour.com.</p>
 <div id="domainsite">
 <p>
 To import from domainsite.com - put your username/password here:
 </p>
 <%= form_tag("/import/domainsite", :method => "post") do %>
-  <%= label_tag(:q, "Search for:") %>
+  <%= label_tag(:q, "Credentials:") %>
 
   <%= text_field_tag(:user) %>
   <%= text_field_tag(:pass) %>
@@ -18,7 +22,7 @@ To import from domainsite.com - put your username/password here:
 To import from godaddy.com - put your username/password here:
 </p>
 <%= form_tag("/import/godaddy", :method => "post") do %>
-  <%= label_tag(:q, "Search for:") %>
+  <%= label_tag(:q, "Credentials:") %>
 
   <%= text_field_tag(:user) %>
   <%= text_field_tag(:pass) %>
