@@ -5,6 +5,7 @@ class ImportController < ApplicationController
     mail_text = params[:text]
     mail_html = params[:html]
     user = User.find_by_email(params[:from])
+    puts "From: #{params[:from]}"
 
     if mail_text
       mail = mail_text
