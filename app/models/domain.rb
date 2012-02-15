@@ -2,8 +2,11 @@ class Domain < ActiveRecord::Base
 
   belongs_to :user
 
-  validates_presence_of :user_id, :domain
-  validates_uniqueness_of :domain, :scope => :user_id
+  validates :user_id,
+    :presence => true
+  validates :domain,
+    :presence => true ,
+    :uniqueness => {:scope => :user_id}
 
   default_scope :order => 'expiration_date ASC'
 
