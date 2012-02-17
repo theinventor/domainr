@@ -14,10 +14,10 @@ RSpec.configure do |config|
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
   #
-  # config.mock_with :mocha
+ config.mock_with :mocha
   # config.mock_with :flexmock
   # config.mock_with :rr
-  config.mock_with :rspec
+#  config.mock_with :rspec
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
 #  config.fixture_path = "#{::Rails.root}/spec/fixtures"
@@ -47,4 +47,12 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
+end
+
+class WhoIsMock
+  attr_reader :created_on, :expires_on
+  def initialize()
+    @created_on = "1997-09-14"
+    @expires_on = "2020-09-12"
+  end
 end

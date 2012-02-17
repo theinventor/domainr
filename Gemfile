@@ -41,6 +41,9 @@ group :test do
   gem 'shoulda', '~> 3.0.0.beta'
   gem "libnotify", "~> 0.7.2"
   gem "factory_girl_rails", "~> 1.6.0"
+  gem "ruby-debug19"
+  gem "fakeweb"
+  gem "mocha"
 end
 
 
