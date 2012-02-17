@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Identity do
   before(:each) do
-    @identity = Identity.create(:name => "john", :email => 'address@example.com', :password => "qwerty", :password_confirmation => "qwerty")
+    @identity = FactoryGirl.create(:identity_john)
   end
   
   context 'relationships' do

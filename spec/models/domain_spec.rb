@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Domain do
   before(:each) do
-    @domain = Domain.create({:domain => "google.com", :user_id => "1"})
+    @domain = FactoryGirl.create(:domain_google)
   end
 
   context 'relationships' do
