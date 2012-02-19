@@ -1,5 +1,11 @@
 <h1>Listing domains</h1>
-
+<div>
+  <%= form_tag search_domains_path, :method => "get" do %>
+    <%= label_tag(nil, "Search for domains:") %>
+    <%= text_field_tag "keyword" %>
+    <%= submit_tag("Search") %>
+  <% end %>
+</div>
 <table>
   <tr>
     <th>Domain</th>

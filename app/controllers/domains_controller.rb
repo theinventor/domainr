@@ -68,5 +68,18 @@ class DomainsController < ApplicationController
     end
   end
 
+  def search
+    if current_user then
+      puts "hi"
+    else
+      redirect_to "/", notice: "Sorry, permission problem or something.."
+    end
+    @domains = Domain.where("user_id = ? AND domain LIKE ?", current_user.id, "%#{params[:keyword]}%") if current_user
+#    @domains = Domain.where("user_id = #{current_user.id} AND domain LIKE '%#{params[:keyword]}%'") if current_user
+    respond_to do |format|
+      format.html {render action: "index"}
+    end
+  end
+
 
 end
