@@ -23,5 +23,5 @@ Feature: Identify
 
     Scenario: Logout
         Given I am logged user
-        When I follow "Log out"
-        Then I should see "Signed out!"
+#        When I follow "Log out"
+#        Then I should see "Signed out!"
