@@ -18,6 +18,16 @@ FactoryGirl.define do
     user_id "1"
   end
 
+  factory :domain_facebook, :class => Domain do
+    domain "facebook.com"
+    user_id "1"
+  end
+
+  factory :domain_twitter, :class => Domain do
+    domain "twitter.com"
+    user_id "1"
+  end
+
 #  factory :jane, :class => User do
 #    full_name 'Jane Doe'
 #    login 'janedoe'

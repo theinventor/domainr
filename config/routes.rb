@@ -6,7 +6,11 @@ Auth::Application.routes.draw do
   match "import/godaddy/" => "import#godaddy", :via => :post
   match "import/domainsite/" => "import#domainsite", :via => :post
 
-  resources :domains
+  resources :domains do
+    collection do
+      get "search"
+    end
+  end
 
   #making a little update route to manually check and return
   match "/update_now/:id", to: "domains#update_domain"
