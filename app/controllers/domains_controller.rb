@@ -1,4 +1,5 @@
 class DomainsController < ApplicationController
+  helper_method :sort_column, :sort_direction
 
   def update_domain
     if current_user then
@@ -14,12 +15,12 @@ class DomainsController < ApplicationController
   # GET /domains.json
   def index
     if current_user then
-      puts "hi"
+      @domains = Domain.where('user_id = ?', current_user.id) 
+      @domains = Domain.unscoped.where('user_id = ?', current_user.id).order(sort_column + " " + sort_direction) if params[:sort]
     else
       redirect_to "/", notice: "Sorry, permission problem or something.."
     end
 
-    @domains = Domain.where('user_id = ?', current_user.id) if current_user
 
 
   end
@@ -81,5 +82,14 @@ class DomainsController < ApplicationController
     end
   end
 
+  private
+
+  def sort_column
+    Domain.column_names.include?(params[:sort]) ? params[:sort] : "Domain"
+  end
+  
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
 
 end

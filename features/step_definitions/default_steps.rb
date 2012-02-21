@@ -37,3 +37,9 @@ end
 Then /^I should be on "([^"]*)" page$/ do |title|
   page.should have_xpath("//title", :text => title)
 end
+
+When /^I debug$/ do
+  require "ruby-debug"
+  debugger
+  page
+end
