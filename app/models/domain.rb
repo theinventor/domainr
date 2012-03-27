@@ -10,6 +10,11 @@ class Domain < ActiveRecord::Base
 
   default_scope :order => 'expiration_date ASC'
 
+  after_create :validate_domain_syntax
+
+  def validate_domain_syntax
+    #TODO - add something to make sure domain exists? ping it? whois it? if whois fails, email the user and delete
+  end
 
   def check_domain_now
     w = Whois.whois(self.domain)

@@ -2,23 +2,23 @@ class DomainsController < ApplicationController
   helper_method :sort_column, :sort_direction
 
   def update_domain
-    if current_user then
+    if current_user
     @domain = Domain.find(params[:id])
     @domain.check_domain_now
     redirect_to "/domains", notice: "Domain updated"
     else
-      redirect_to "/", notice: "Sorry, permission problem or something.."
+      redirect_to "/404.html"
     end
   end
 
   # GET /domains
   # GET /domains.json
   def index
-    if current_user then
+    if current_user
       @domains = Domain.where('user_id = ?', current_user.id) 
       @domains = Domain.unscoped.where('user_id = ?', current_user.id).order(sort_column + " " + sort_direction) if params[:sort]
     else
-      redirect_to "/", notice: "Sorry, permission problem or something.."
+      redirect_to "/", notice: "please login to view domains"
     end
 
 
@@ -31,13 +31,9 @@ class DomainsController < ApplicationController
 
     @domain = Domain.find(params[:id])
     if current_user.id != @domain.user_id
-      redirect_to "/"
+      redirect_to "/404.html"
     end
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @domain }
-    end
   end
 
   # GET /domains/new
